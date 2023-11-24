@@ -1,4 +1,4 @@
-// Import necessary Flutter packages
+// Import necessary Futter packages
 import 'package:audio_service/audio_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -11,17 +11,17 @@ import 'package:musicapp/services/my_audio_handler.dart';
 // Create an instance of MyAudioHandler
 MyAudioHandler _audioHandler = MyAudioHandler();
 
-// main function, the entry point of the Flutter application
+// main function, the entry pont of the app
 Future<void> main() async {
-  // Ensure that Flutter binding is initialized
+  //Ensure that Flutter binding is initalized
   WidgetsFlutterBinding.ensureInitialized();
 
   // Initialize AudioService with MyAudioHandler as the audio handler
   _audioHandler = await AudioService.init(
     builder: () => MyAudioHandler(),
     config: const AudioServiceConfig(
-      androidNotificationChannelId: 'com.ryanheise.myapp.channel.audio',
-      androidNotificationChannelName: 'Audio playback',
+      androidNotificationChannelId: 'com.musicapp.example',
+      androidNotificationChannelName: 'Audio Playback',
       androidNotificationOngoing: true,
     ),
   );
@@ -33,10 +33,8 @@ Future<void> main() async {
 
 // MainApp class, a StatelessWidget representing the main application
 class MainApp extends StatelessWidget {
-  // Constructor for MainApp
   const MainApp({super.key});
 
-  // build method, returns the widget tree for MainApp
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
