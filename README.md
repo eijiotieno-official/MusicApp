@@ -3,7 +3,7 @@
 Source code to a music app built using Flutter's just_audio and audio_service
 package.
 
-[Watch the Video](https://www.youtube.com/watch?v=abc123xyz)
+[Watch the Video](https://youtu.be/OsGofygp2GA?si=lqwKa07xnsADlJ_i)
 
 ## Screenshots
 
